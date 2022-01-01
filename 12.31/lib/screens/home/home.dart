@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
                   {'token' : FieldValue.delete()}),
               _authController.signout()},
             icon: const Icon(Icons.logout, color: Color(0xff343A40)),
-            iconSize: 28.0,
+            iconSize: Config.screenWidth! * 0.065,
           )
         ],
       ),
@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
                       height: Config.screenWidth! * 0.73,
                     ),
                     Container(
-                      padding: const EdgeInsets.all(13),
+                      padding: EdgeInsets.all(Config.screenWidth! * 0.03),
                       width: MediaQuery.of(context).size.width * 0.4,
                       //157,
                       height: MediaQuery.of(context).size.height * 0.3,
@@ -106,7 +106,7 @@ class _HomeState extends State<Home> {
                           BoxShadow(
                             color: Color(0xffADB5BD),
                             offset: Offset(-0.26, 0.81),
-                            blurRadius: 3.11,
+                            blurRadius: 5,
                           )
                         ],
                       ),
@@ -139,32 +139,33 @@ class _HomeState extends State<Home> {
                               //  role: _role,
                             ));
                           },
-                          child: const Text(
+                          child: Text(
                             'Ask',
                             style: TextStyle(
                               //  color: Color(0xff3F5A49),
-                              fontSize: 32,
+                              fontSize: Config.screenWidth! * 0.09,
                             ),
                           ),
                           style: ElevatedButton.styleFrom(
                             shape: const CircleBorder(),
-                            padding: const EdgeInsets.all(20),
+                            padding: EdgeInsets.all(Config.screenWidth! * 0.05),
                             primary: const Color(0xff3F5A49),
                           )),
                     ),
                     SizedBox(
-                        width: Config.screenWidth! * 0.8,
+                        width: Config.screenWidth! * 0.7,
+                        height: Config.screenHeight! * 0.07,
                         child: ElevatedButton(
                           onPressed: () async {
                             Get.to(() => const ChannelList());
                           },
-                          child: const Text(
+                          child: Text(
                             "Help Requests",
-                            //style: TextStyle(color:Color(0xff7EA68D)),
+                            style: TextStyle(fontSize: Config.screenWidth! * 0.05),
                           ),
                           style: ElevatedButton.styleFrom(
                             primary: const Color(0xff7EA68D),
-                            padding: const EdgeInsets.all(10),
+                            //padding: EdgeInsets.all(Config.screenWidth! * 0.02),
                           ),
                         )
                     )
