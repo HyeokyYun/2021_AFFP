@@ -3,3 +3,5 @@
 <br>
 androidManifest 파일에 푸쉬 채널 설정 후 바꾸기.
 <br>
+20220101<br>
+localNotification 작동이 안됨. 
