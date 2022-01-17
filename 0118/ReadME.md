@@ -1,6 +1,6 @@
 파이어베이스에서 유저 수 카운트 시도... <br>
 home.dart 수정 <br>
-₩₩₩
+```
 List<String> tokens = [];
   Future<int> countUsers() async {
     QuerySnapshot querySnapshot = await FirebaseFirestore.instance.collection('users').get();
@@ -13,4 +13,4 @@ List<String> tokens = [];
     int count = await countUsers();
     return count;
   }
-₩₩₩
+```
